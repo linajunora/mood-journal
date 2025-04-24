@@ -1,3 +1,23 @@
 {
-    "entries": []
-  }
+  "entries": [
+    {
+      "id": "1234",
+      "userId": "0ca8",
+      "mood": "sad",
+      "note": "had a rough day",
+      "timestamp": "2025-04-23T14:00:00Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "0ca8",
+      "username": "Lina",
+      "password": "password"
+    },
+    {
+      "id": "f6d2",
+      "username": "nimbus",
+      "password": "nimbus"
+    }
+  ]
+}
