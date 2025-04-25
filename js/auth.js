@@ -91,3 +91,9 @@ const login = async() => {
     }
 }
 btnLogin.addEventListener('click', login);
+
+
+
+
+
+  //<li><a href="/index.html" class="navLink" id="logout">Logout</a></li>

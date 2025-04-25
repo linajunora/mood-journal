@@ -6,6 +6,7 @@
     <title>Current Mood</title>
     <link rel="stylesheet" href="/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="/app.js"></script>
 </head>
 <body class="userBody">
     <nav class="userNav">
@@ -13,13 +14,155 @@
           <li><a href="userStart.html" class="navLink">Home</a></li>
           <li><a href="entries.html" class="navLink">Entries</a></li>
           <li><a href="addEntry.html" class="navLink">Current Mood</a></li>
-          <li><a href="/index.html" class="navLink">Logout</a></li>
         </ul>
+        <button id="logoutBtn">Log Out</button>
       </nav>
     <main class="userMain">
-        <div class="userHeading">
-            <h1>Welcome</h1>
-        </div>
+       <div class="addEntryDiv">
+        <section class="moodCheckSection">
+            <h1>Current Mood?</h1>
+            <div class="moodCheckboxes">
+                <input type="radio" id="happySelect" name="moodSelect" value="happy">
+                <label for="happy">Happy</label>
+                
+                <input type="radio" id="contentSelect" name="moodSelect" value="content">
+                <label for="content">Content</label>
+
+                <input type="radio" id="okeySelect" name="moodSelect" value="okey">
+                <label for="okey">Okey</label>
+
+                <input type="radio" id="slightlyOffSelect" name="moodSelect" value="slightlyOff">
+                <label for="slightlyOff">Slightly Off</label>
+
+                <input type="radio" id="blueSelect" name="moodSelect" value="blue">
+                <label for="blue">Blue</label>
+            </div>
+        </section>
+        <form id="entryForm" style="display: none;">
+            <!-- Title -->
+            <label for="title">Give Today a Title:</label>
+            <input type="text" id="title" name="title" required />
+          
+            <!-- Mood (radio, only one selectable) -->
+            <fieldset>
+              <legend>Mood:</legend>
+              <input type="radio" id="happy" name="mood" value="happy">
+                <label for="happy">Happy</label>
+                
+                <input type="radio" id="content" name="mood" value="content">
+                <label for="content">Content</label>
+
+                <input type="radio" id="okey" name="mood" value="okey">
+                <label for="okey">Okey</label>
+
+                <input type="radio" id="slightlyOff" name="mood" value="slightlyOff">
+                <label for="slightlyOff">Slightly Off</label>
+
+                <input type="radio" id="blue" name="mood" value="blue">
+                <label for="blue">Blue</label>
+            </fieldset>
+          
+            <!-- Feelings-->
+            <fieldset>
+              <legend>Name all the emotions!</legend>
+
+                <input type="checkbox" id="excited" name="feeling" value="excited" />
+                <label for="excited">Excited</label>
+
+                <input type="checkbox" id="relaxed" name="feeling" value="relaxed" />
+                <label for="relaxed">Relaxed</label>
+
+                <input type="checkbox" id="proud" name="feeling" value="proud" />
+                <label for="proud">Proud</label>
+
+                <input type="checkbox" id="hopeful" name="feeling" value="hopeful" />
+                <label for="hopeful">Hopeful</label>
+
+                <input type="checkbox" id="happy" name="feeling" value="happy" />
+                <label for="happy">Happy</label>
+
+                <input type="checkbox" id="enthusiastic" name="feeling" value="enthusiastic" />
+                <label for="enthusiastic">Enthusiastic</label>
+
+                <input type="checkbox" id="refreshed" name="feeling" value="refreshed" />
+                <label for="refreshed">Refreshed</label>
+
+                <input type="checkbox" id="calm" name="feeling" value="calm" />
+                <label for="calm">Calm</label>
+
+                <input type="checkbox" id="grateful" name="feeling" value="grateful" />
+                <label for="grateful">Grateful</label>
+
+                <input type="checkbox" id="depressed" name="feeling" value="depressed" />
+                <label for="depressed">Depressed</label>
+
+                <input type="checkbox" id="lonely" name="feeling" value="lonely" />
+                <label for="lonely">Lonely</label>
+
+                <input type="checkbox" id="anxious" name="feeling" value="anxious" />
+                <label for="anxious">Anxious</label>
+
+                <input type="checkbox" id="sad" name="feeling" value="sad" />
+                <label for="sad">Sad</label>
+
+                <input type="checkbox" id="angry" name="feeling" value="angry" />
+                <label for="angry">Angry</label>
+
+                <input type="checkbox" id="pressured" name="feeling" value="pressured" />
+                <label for="pressured">Pressured</label>
+
+                <input type="checkbox" id="annoyed" name="feeling" value="annoyed" />
+                <label for="annoyed">Annoyed</label>
+
+                <input type="checkbox" id="tired" name="feeling" value="tired" />
+                <label for="tired">Tired</label>
+
+                <input type="checkbox" id="stressed" name="feeling" value="stressed" />
+                <label for="stressed">Stressed</label>
+
+                <input type="checkbox" id="bored" name="feeling" value="bored" />
+                <label for="bored">Bored</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Today's Activities</legend>
+              
+                <input type="checkbox" id="work" name="activities" value="work" />
+                <label for="work">Work</label>
+              
+                <input type="checkbox" id="school" name="activities" value="school" />
+                <label for="school">School</label>
+              
+                <input type="checkbox" id="studying" name="activities" value="studying" />
+                <label for="studying">Studying</label>
+              
+                <input type="checkbox" id="hobbies" name="activities" value="hobbies" />
+                <label for="hobbies">Hobbies</label>
+              
+                <input type="checkbox" id="friends" name="activities" value="friends" />
+                <label for="friends">Friends</label>
+              
+                <input type="checkbox" id="chores" name="activities" value="chores" />
+                <label for="chores">Chores</label>
+              
+                <input type="checkbox" id="family" name="activities" value="family" />
+                <label for="family">Family</label>
+              
+                <input type="checkbox" id="partner" name="activities" value="partner" />
+                <label for="partner">Partner</label>
+              
+                <input type="checkbox" id="rest" name="activities" value="rest" />
+                <label for="rest">Rest</label>
+              </fieldset>
+          
+            <!-- Note -->
+            <label for="note">Note:</label><br />
+            <textarea id="note" name="note" rows="4" cols="50"></textarea>
+          
+            <!-- Submit -->
+            <button id="addEntryBtn" type="submit">Add Entry</button>
+          </form>
+       </div>
     </main>
 </body>
 </html>

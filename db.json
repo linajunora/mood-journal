@@ -3,9 +3,55 @@
     {
       "id": "1234",
       "userId": "0ca8",
-      "mood": "sad",
+      "title": "heavy day",
+      "mood": "okey",
+      "feeling": [
+        "sad",
+        "calm",
+        "lonely"
+      ],
       "note": "had a rough day",
       "timestamp": "2025-04-23T14:00:00Z"
+    },
+    {
+      "id": "b9c6",
+      "userId": "0ca8",
+      "title": "Great day out!",
+      "mood": "content",
+      "feeling": [
+        "excited",
+        "relaxed",
+        "proud",
+        "hopeful",
+        "happy",
+        "grateful",
+        "tired"
+      ],
+      "activities": [
+        "studying",
+        "hobbies",
+        "family"
+      ],
+      "note": "Great day walking to hellasgården with my mom and Nimbus!",
+      "timestamp": "2025-04-25T16:01:04.105Z"
+    },
+    {
+      "id": "2ea0",
+      "userId": "0ca8",
+      "title": "Pooopp",
+      "mood": "content",
+      "feeling": [
+        "relaxed",
+        "depressed",
+        "anxious",
+        "annoyed"
+      ],
+      "activities": [
+        "school",
+        "chores"
+      ],
+      "note": "gkghgjh",
+      "timestamp": "2025-04-25T16:03:31.922Z"
     }
   ],
   "users": [
