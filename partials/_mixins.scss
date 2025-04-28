@@ -1,0 +1,18 @@
+@mixin mood {
+    font-family: "Borel", cursive;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 4rem;
+    color: $Green600;
+}
+@mixin journal {
+    font-family: "Squada One", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: $Green500;
+    letter-spacing: 3px;
+}
+
+@mixin raleway {
+    font-family: "Raleway", sans-serif;
+}

@@ -1,8 +1,155 @@
-h1 {
-    color: red;
-    border: 2px solid blue;
-}
-
 .hidden{
     display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    @include raleway;
+}
+
+
+
+.indexBody {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 20px;
+    background-color: $Beige500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .indexMain {
+        background-color: $Beige400;
+        border: 1px solid $Beige700;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: auto;
+        padding-bottom: 40px;
+        transition: all 0.3s ease-in-out;
+
+        .indexHeading {
+            border-radius: 20px;
+            background-color: $Beige400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 85px;
+            padding-top: 85px;
+
+            h1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .moodH1{
+                @include mood;
+                height: 65px;
+               
+            }
+            .journalH1 {
+                @include journal;
+                text-transform: uppercase;
+            }
+
+        }
+        .loginWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+
+        .pleaseLogin {
+            font-size: 13px;
+            margin-bottom: 20px;
+            color: $Beige700;
+        }
+
+        .userAuthContainer {
+            display: flex;
+            flex-direction: column;
+
+            .login {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+
+                .inputStuff {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .name, .password {
+                    width: 100%;
+                    label {
+                    color: $Beige800;
+                    font-size: 12px;
+                    }
+                }
+                .buttons {
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+            }
+        }
+        }
+    }
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 9px 15px;
+  border: 1px solid $Beige700;
+  border-radius: 10px;
+  background-color: $Beige400;
+  font-family: inherit;
+  font-size: 1rem;
+  color: $Neutral700;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:focus {
+    border-color: $Green500;
+    box-shadow: 0 0 0 3px rgba(204, 213, 174, 0.4); 
+    outline: none;
+    background-color: $Beige500;
+  }
+}
+
+button {
+  padding: 10px 15px;
+  background-color: $Green500;
+  color: $Neutral800;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: $Green600;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    background-color: $Green400;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+input {
+    background-color: red;
 }

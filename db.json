@@ -1,22 +1,9 @@
 {
   "entries": [
     {
-      "id": "1234",
-      "userId": "0ca8",
-      "title": "heavy day",
-      "mood": "okey",
-      "feeling": [
-        "sad",
-        "calm",
-        "lonely"
-      ],
-      "note": "had a rough day",
-      "timestamp": "2025-04-23T14:00:00Z"
-    },
-    {
       "id": "b9c6",
       "userId": "0ca8",
-      "title": "Great day out!",
+      "title": "Great day out with mom!nnddddd",
       "mood": "content",
       "feeling": [
         "excited",
@@ -33,12 +20,12 @@
         "family"
       ],
       "note": "Great day walking to hellasgården with my mom and Nimbus!",
-      "timestamp": "2025-04-25T16:01:04.105Z"
+      "timestamp": "2025-04-25T00:00:00.000Z"
     },
     {
       "id": "2ea0",
       "userId": "0ca8",
-      "title": "Pooopp",
+      "title": "Poooppjjjjj",
       "mood": "content",
       "feeling": [
         "relaxed",
@@ -51,7 +38,92 @@
         "chores"
       ],
       "note": "gkghgjh",
-      "timestamp": "2025-04-25T16:03:31.922Z"
+      "timestamp": "2025-04-25T00:00:00.000Z"
+    },
+    {
+      "id": "74a5",
+      "userId": "0ca8",
+      "title": "bad day",
+      "mood": "blue",
+      "feeling": [
+        "depressed",
+        "annoyed",
+        "tired"
+      ],
+      "activities": [
+        "family"
+      ],
+      "note": "Didnt get to do ANYTHING fun",
+      "timestamp": "2025-04-17T00:00:00.000Z"
+    },
+    {
+      "id": "b470",
+      "userId": "0ca8",
+      "title": "titlee",
+      "mood": "slightlyOff",
+      "feeling": [
+        "relaxed",
+        "lonely"
+      ],
+      "activities": [
+        "family"
+      ],
+      "note": "ehj",
+      "timestamp": "2025-04-16T00:00:00.000Z"
+    },
+    {
+      "id": "c5ad",
+      "userId": "0ca8",
+      "title": "Studying, a bit stressssqq",
+      "mood": "okey",
+      "feeling": [
+        "proud",
+        "hopeful",
+        "calm",
+        "lonely",
+        "pressured",
+        "annoyed",
+        "tired",
+        "bored"
+      ],
+      "activities": [
+        "studying",
+        "hobbies"
+      ],
+      "note": "Full day of coding",
+      "timestamp": "2025-04-27T00:00:00.000Z"
+    },
+    {
+      "id": "ea23",
+      "userId": "0ca8",
+      "title": "hejj",
+      "mood": "happy",
+      "feeling": [
+        "refreshed",
+        "lonely"
+      ],
+      "activities": [
+        "studying"
+      ],
+      "note": "ge",
+      "timestamp": "2025-04-19T00:00:00.000Z"
+    },
+    {
+      "id": "e1c9",
+      "userId": "0ca8",
+      "title": "hejj",
+      "mood": "content",
+      "feeling": [
+        "relaxed",
+        "lonely",
+        "anxious"
+      ],
+      "activities": [
+        "family",
+        "partner"
+      ],
+      "note": "asqfwe",
+      "timestamp": "2025-05-18T00:00:00.000Z"
     }
   ],
   "users": [

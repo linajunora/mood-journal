@@ -1,1 +1,6 @@
-@import "partials/index.scss";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/index";
+@import "partials/user";
+@import "partials/nav";
+@import "partials/calendar";

@@ -5,21 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Raleway:ital,wght@0,100..900;1,100..900&family=Squada+One&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function clearEntrySession() {
+            sessionStorage.removeItem('selectedDate');
+            sessionStorage.removeItem('editingEntryId');
+            sessionStorage.removeItem('editingEntryData');
+        }
+        </script>
     <script type="module" src="/app.js"></script>
+    <script type="module" src="/js/calendar.js"></script>
 </head>
 <body class="userBody">
     <nav class="userNav">
         <ul class="navList">
           <li><a href="userStart.html" class="navLink">Home</a></li>
           <li><a href="entries.html" class="navLink">Entries</a></li>
-          <li><a href="addEntry.html" class="navLink">Current Mood</a></li>
+          <li><a href="addEntry.html" class="navLink" onclick="clearEntrySession()">Current Mood</a></li>
         </ul>
         <button id="logoutBtn">Log Out</button>
       </nav>
     <main class="userMain">
         <div class="userHeading">
             <h1>Welcome</h1>
+        </div>
+        <div class="calendarHeader">
+            <button id="prevMonth">←</button>
+            <h2 id="monthDisplay"></h2>
+            <button id="nextMonth">→</button>
+          </div>
+        <div class="calendar">
         </div>
     </main>
 </body>

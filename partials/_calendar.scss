@@ -1,0 +1,47 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
+  
+  .day {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray; // default
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .day.has-entry {
+    background-color: #e9edc9; // soft green or similar
+  }
+
+  .calendarHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  
+    button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: $Neutral700;
+  
+      &:hover {
+        color: $Green600;
+      }
+    }
+  
+    #monthDisplay {
+      font-size: 20px;
+      font-weight: bold;
+      color: $Neutral900;
+    }
+  }

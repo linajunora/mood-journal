@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood Journal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Raleway:ital,wght@0,100..900;1,100..900&family=Squada+One&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="/js/auth.js"></script>
 </head>
 <body class="indexBody">
     <main class="indexMain">
         <div class="indexHeading">
-            <h1>Mood Journal</h1>
+            <h1><span class="moodH1">Mood</span> <span class="journalH1">Journal</span></h1>
         </div>
-        <p class="pleaseLogin">Please login to continue</p>
-        <section class="userAuthContainer">
-            <div class="login">
-                <div class="name">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username"/>
+        <div class="loginWrapper">
+            <p class="pleaseLogin">Please login to continue</p>
+            <section class="userAuthContainer">
+                <div class="login">
+                    <div class="inputStuff">
+                        <div class="name">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username"/>
+                        </div>
+                        <div class="password">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" autocomplete="current-password"/>
+                            <p id="error" class="hidden">Username already taken</p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="createUser" type="button">Create User</button>
+                        <button id="login" type="button">Login</button>
+                    </div>
                 </div>
-                <div class="password">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" autocomplete="current-password"/>
-                    <p id="error" class="hidden">Username already taken</p>
-                </div>
-                <div class="buttons">
-                    <button id="createUser" type="button">Create User</button>
-                    <button id="login" type="button">Login</button>
-                </div>
-            </div>
-        </section>
-    </main>
-    
+            </section>
+        </div>
+    </main> 
 </body>
 </html>

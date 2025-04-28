@@ -1,0 +1,14 @@
+.userBody {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $Beige500;
+    
+    
+    .userMain {
+      flex-grow: 1;
+      padding-bottom: 80px; // leave space so nav doesn't overlap main content
+    }
+  }
+  

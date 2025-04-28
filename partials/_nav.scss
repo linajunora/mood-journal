@@ -1,0 +1,31 @@
+.userNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $Neutral700; // or whatever color you want
+    padding: 15px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); // nice soft shadow at top
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    .navList {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        gap: 20px;
+        padding-right: 20px;
+        .navLink {
+            text-decoration: none;
+            color: $Beige400;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    }
+    #logoutBtn {
+        // margin-left: 10px;
+        width: 120px;
+    }
+}
