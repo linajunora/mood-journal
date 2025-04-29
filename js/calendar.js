@@ -45,28 +45,33 @@ const fetchAndDisplayCalendar = async () => {
         monthDisplay.textContent = `${monthNames[month]} ${year}`;
 
         //start at day1, go up to day30. for each day, make a date object
-       for (let day = 1; day <= daysInMonth; day++) {
-            const isoDate = createSafeISODate(year, month, day);
-
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayDate = new Date(Date.UTC(year, month, day));
+            const isoDate = dayDate.toISOString().split('T')[0];
+        
             const dayDiv = document.createElement('div');
             dayDiv.classList.add('day');
-
+        
+            const circleDiv = document.createElement('div');
+            circleDiv.classList.add('circle');
+        
+            const dayNumberDiv = document.createElement('div');
+            dayNumberDiv.classList.add('dayNumber');
+            dayNumberDiv.textContent = day;
+        
             dayDiv.addEventListener('click', handleDayClick);
-
+        
             if (entriesByDate[isoDate]) {
                 const mood = entriesByDate[isoDate];
-                dayDiv.textContent = getMoodEmoji(mood);
+                circleDiv.textContent = getMoodEmoji(mood);
                 dayDiv.classList.add('hasEntry');
-                
-                //save entry info into the dayDiv
-                dayDiv.dataset.hasEntry = 'true';
-                dayDiv.dataset.date = isoDate;
-                dayDiv.dataset.mood = mood;
-            } else {
-                dayDiv.textContent = day;
-                dayDiv.dataset.hasEntry = 'false';
-                dayDiv.dataset.date = isoDate;
             }
+        
+            dayDiv.dataset.hasEntry = entriesByDate[isoDate] ? 'true' : 'false';
+            dayDiv.dataset.date = isoDate;
+        
+            dayDiv.appendChild(circleDiv);
+            dayDiv.appendChild(dayNumberDiv);
             calendarContainer.appendChild(dayDiv);
         }
     } catch (error) {

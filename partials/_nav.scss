@@ -2,8 +2,8 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
-    background-color: $Neutral700; // or whatever color you want
+    width: 100vw;
+    background-color: $Neutral500; // or whatever color you want
     padding: 15px 20px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); // nice soft shadow at top
     display: flex;
@@ -22,10 +22,17 @@
             color: $Beige400;
             font-weight: bold;
             font-size: 16px;
+            .navImg {
+                width: 50px;
+            }
         }
     }
     #logoutBtn {
+        background: none;
+        box-shadow: none;
         // margin-left: 10px;
-        width: 120px;
+        img {
+            width: 50px;
+        }
     }
 }

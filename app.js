@@ -131,16 +131,19 @@ const displayEntries = (entries) => {
           });
 
         entryCard.innerHTML = `
+        <div class="titleDiv">
         <h3 class="entryTitle">${entry.title}</h3>
+        </div>
         <div class="entryInfoDiv">
-        <p class="entryP"><strong>Day:</strong>${formatted}</p>
-        <p class="entryP"><strong>Mood:</strong>${entry.mood}</p>
-        <p class="entryP"><strong>Feelings:</strong>${entry.feeling}</p>
-        <p class="entryP"><strong>Note:</strong>${entry.note}</p>
+        <p class="entryP"><strong>Day:</strong> ${formatted}</p>
+        <p class="entryP"><strong>Mood:</strong> ${entry.mood}</p>
+        <p class="entryP"><strong>Feelings:</strong> ${entry.feeling.join(', ')}</p>
+        <p class="entryP"><strong>Activities:</strong> ${entry.activities.join(', ')}</p>
+        <p class="entryP"><strong>Note:</strong> ${entry.note}</p>
         </div>
          <div class="entryButtons">
-        <button class="editEntryBtn" data-id="${entry.id}">✏️ Edit</button>
-        <button class="deleteEntryBtn" data-id="${entry.id}">🗑️ Delete</button>
+        <button class="editEntryBtn" data-id="${entry.id}">✏️</button>
+        <button class="deleteEntryBtn" data-id="${entry.id}">🗑️</button>
         </div>
         `;
         entriesDiv.appendChild(entryCard);

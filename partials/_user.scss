@@ -1,14 +1,63 @@
 .userBody {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
     background-color: $Beige500;
-    
-    
     .userMain {
       flex-grow: 1;
       padding-bottom: 80px; // leave space so nav doesn't overlap main content
+        .addEntryDiv {
+            width: 100%;
+            .moodCheckSection {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #entryForm {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                margin-bottom: 70px;
+                
+                legend, .titleLabel {
+                    font-weight: 700;
+                    font-style: bold;
+                    color: $Beige800;
+                    font-size: 1rem;
+                }
+                fieldset {
+                    background-color: $Beige400;
+                    border-radius: 10px;
+                    border: 1px solid $Beige650;
+                    padding: 20px 13px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    color: $Neutral500;
+
+                }
+                .submitBtn {
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+      .userHeading {
+        .moodCalendarH1 {
+            font-size: 2.4rem;
+        }
+      }
     }
   }
   
+  #title, #note {
+    margin-bottom: 20px;
+  }
